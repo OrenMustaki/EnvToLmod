@@ -25,7 +25,7 @@ for line in show_env.splitlines():
     if line in clean_env:
         continue
     var = line.split("=")[0]
-    values = line.split("=")[1]
+    values = "".join(line.split("=")[1:])
     
     vars[var] = [ v for v in values.split(":") ]
 
